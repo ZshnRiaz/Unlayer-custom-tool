@@ -3,8 +3,9 @@ unlayer.registerPropertyEditor(
       name: "my_color_picker",
       layout: "bottom",
       Widget: unlayer.createWidget({
-          render: (e, t, o) => `\n        <input class="value" type="text" value="${e}" />\n        <button class="red">Red</button>\n        <button class="green">Green</button>\n        <button class="blue">Blue</button>\n      `,
+          render: (e, t, o) => {console.log(e,t,o,'render'); return `\n        <input class="value" type="text" value="${e}" />\n        <button class="red">Red</button>\n        <button class="green">Green</button>\n        <button class="blue">Blue</button>\n      `},
           mount(e, t, o, l) {
+            console.log(e,t,o,l,'mount');
               var r = e.querySelector(".value"),
                   n = e.querySelector(".red"),
                   u = e.querySelector(".green"),
@@ -60,8 +61,8 @@ unlayer.registerPropertyEditor(
               }
           },
           head: {
-              css: function(e) {},
-              js: function(e) {}
+              css: function(e) {  console.log(e,'css');},
+              js: function(e) { console.log(e,'js');}
           }
       }
   });
