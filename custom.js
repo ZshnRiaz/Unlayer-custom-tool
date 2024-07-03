@@ -45,7 +45,18 @@ unlayer.registerPropertyEditor(
                       widget: "my_color_picker"
                   }
               }
-          }
+          },
+          image: {
+            title: "Image",
+            position: 1,
+            options: {
+                Image: {
+                    label: "Image",
+                    defaultValue: "#ff0000",
+                    widget: "image"
+                }
+            }
+        }
       },
       values: {},
       renderer: {
