@@ -50,10 +50,14 @@ unlayer.registerPropertyEditor(
             title: "Image",
             position: 1,
             options: {
-                Image: {
+                image: {
                     label: "Image",
                     defaultValue: "#ff0000",
                     widget: "image"
+                },
+                padding:{
+                    title:"Padding",
+                    widget: "margin"
                 }
             }
         }
